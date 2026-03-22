@@ -1,29 +1,45 @@
 @import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-ztNature: var(--font-zt-nature);
+  --animate-blob: blob 7s infinite;
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 10px -10px rgba(59, 130, 246, 0.5); }
+    to { box-shadow: 0 0 30px 5px rgba(59, 130, 246, 0.6); }
+  }
 }
 
+.gradient-text-animate {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
-
 body {
   background-color: #000000;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: var(--foreground);
 }

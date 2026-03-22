@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-
 const ztNature = localFont({
   src: [
     {
@@ -22,16 +21,14 @@ const ztNature = localFont({
   ],
   variable: '--font-zt-nature',
 })
-
 export const metadata: Metadata = {
-  title: 'Your App',
-  description: 'Your description',
+  title: 'TulStack',
+  description: "Tulsa's Premier Web Development Agency",
 }
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={ztNature.variable}>
-      <body className={`${ztNature.className} antialiased min-h-screen bg-gradient-to-b from-black to-[#0015FF] text-white`}>
+    <html lang="en" className={`${ztNature.variable} scroll-smooth`}>
+      <body className={`${ztNature.className} antialiased min-h-screen bg-linear-to-b from-black to-[#0015FF] text-white`}>
         {children}
       </body>
     </html>

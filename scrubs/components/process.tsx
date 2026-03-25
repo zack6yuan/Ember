@@ -1,0 +1,76 @@
+import { ArrowRight } from "lucide-react";
+import FadeIn from "./fade-in";
+export default function ProcessSection() {
+  const processSteps = [
+    {
+      num: "1",
+      title: "Download the app",
+      desc: "It's free to join. Create an account and join a conversation with nurses who get it.",
+    },
+    {
+      num: "2",
+      title: "Find your people",
+      desc: "Scroll through real stories from nurses across the country. Find your unit, your unit type, or just a friendly face.",
+    },
+    {
+      num: "3",
+      title: "Vent or connect",
+      desc: "Share your shift, ask for advice, or just drop a GIF. No judgment. No pressure. Just real talk.",
+    },
+  ];
+  return (
+    <div id="process" className="flex flex-col items-center gap-10 w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0">
+      <FadeIn>
+        <div className="w-full max-w-4xl text-center">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
+            <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
+             Three Steps. That&apos;s It.
+            </span>
+          </h2>
+          <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
+            You've earned a place to be honest. Here's how to get there.
+          </p>
+        </div>
+      </FadeIn>
+      <div className="relative mt-8 md:mt-16 w-full max-w-4xl">
+        <div className="absolute top-[24px] left-[23.5px] md:top-[32px] md:left-[39.5px] bottom-10 w-px md:w-[2px] bg-linear-to-b from-red-600 via-red-600/50 to-transparent z-0"></div>
+        <div className="flex flex-col gap-12 sm:gap-16">
+          {processSteps.map((step, idx) => (
+            <FadeIn key={idx} delay={idx * 200} direction="left">
+              <div className="relative z-10 flex gap-6 md:gap-10 items-start group">
+                <div className="shrink-0 w-12 h-12 md:w-20 md:h-20 rounded-full bg-red-600 flex items-center justify-center text-2xl md:text-4xl font-medium text-white shadow-[0_4px_30px_rgba(220,38,38,0.4)] transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_4px_40px_rgba(220,38,38,0.6)]">
+                  {step.num}
+                </div>
+                <div className="pt-2 md:pt-4">
+                  <h3 className="text-2xl md:text-4xl font-medium text-white mb-3 tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-white/70 text-base md:text-xl lg:text-2xl leading-relaxed font-light">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+      <FadeIn delay={100}>
+        <div className="w-full max-w-3xl mt-12 md:mt-20">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 p-8 md:p-10 rounded-4xl bg-white/5 border border-white/10 shadow-[0_4px_40px_-10px_rgba(255,255,255,0.05)] backdrop-blur-md hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+            <div className="text-center sm:text-left flex-1">
+              <h3 className="text-2xl md:text-4xl font-medium text-white mb-2 tracking-tight">Ready to find your community?</h3>
+              <p className="text-white/70 text-base md:text-xl font-light">Join the conversation today.</p>
+            </div>
+            <a
+              href="#contact"
+              className="group flex shrink-0 items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_20px_rgba(220,38,38,0.3)] hover:shadow-[0_4px_30px_rgba(220,38,38,0.5)]"
+            >
+              <span>Join Scrubs</span>
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  );
+}

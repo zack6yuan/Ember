@@ -5,10 +5,10 @@ import Image from 'next/image';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "The Process", href: "#process" },
-    { name: "About Me", href: "#about" },
+    { name: "Features", href: "#services" },
+    { name: "How It Works", href: "#process" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -22,16 +22,16 @@ export default function Footer() {
           <div className="flex flex-col max-w-sm">
             <Link href="/" className="flex items-center gap-3 mb-6 group w-fit">
               <Image 
-                src="/tulsa-flag.webp" 
-                alt="Tulsa Flag" 
+                src="/S.png" 
+                alt="Scrubs Logo" 
                 width={40} 
                 height={40}
-                className="rounded object-cover w-10 h-10 shrink-0 transition-transform duration-300 group-hover:scale-105"
+                className="object-contain w-10 h-10 shrink-0 invert brightness-200 transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-3xl font-ztNature tracking-tight text-white leading-none">TulStack</span>
+              <span className="text-3xl font-ztNature tracking-tight text-white leading-none">Scrubs</span>
             </Link>
             <p className="text-white/60 mb-6 font-light leading-relaxed">
-              Helping local small businesses turn complex ideas into digital products people love. Modern websites designed to scale.
+              A private community where nurses say the quiet part out loud. Vent. Connect. Decompress. Built for the shift that never quite ends.
             </p>
             <div className="flex items-center text-sm text-white/50">
               <MapPin size={16} className="mr-2" />
@@ -47,9 +47,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href} 
-                    className="text-white/60 hover:text-blue-400 transition-colors duration-300 font-light flex items-center gap-2 group"
+                    className="text-white/60 hover:text-red-400 transition-colors duration-300 font-light flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-blue-400 transition-colors"></span>
+                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-red-400 transition-colors"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-medium text-lg mb-2">Contact Info</h4>
             <div className="flex flex-col gap-3 text-white/60 font-light">
-              <a href="mailto:zackyuandev@gmail.com" className="hover:text-blue-400 transition-colors duration-300">
+              <a href="mailto:zackyuandev@gmail.com" className="hover:text-red-400 transition-colors duration-300">
                 zackyuandev@gmail.com
               </a>
             </div>
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Bottom Copyright Line */}
         <div className="w-full border-t border-white/10 mt-12 md:mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm font-medium">
-          <p>© {currentYear} TulStack. All rights reserved.</p>
+          <p suppressHydrationWarning>© {currentYear} Scrubs. All rights reserved.</p>
         </div>
 
       </div>

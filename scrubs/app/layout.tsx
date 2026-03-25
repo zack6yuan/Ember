@@ -22,13 +22,13 @@ const ztNature = localFont({
   variable: '--font-zt-nature',
 })
 export const metadata: Metadata = {
-  title: 'TulStack',
-  description: "Tulsa's Premier Web Development Agency",
+  title: 'Scrubs',
+  description: "A community venting app for nurses and healthcare workers",
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${ztNature.variable} scroll-smooth`}>
-      <body className={`${ztNature.className} antialiased min-h-screen bg-linear-to-b from-black to-[#0015FF] text-white`}>
+      <body className={`${ztNature.className} antialiased min-h-screen text-white`} style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 40%, #1a0505 0%, #0a0000 40%, #000000 100%)' }}>
         {children}
       </body>
     </html>

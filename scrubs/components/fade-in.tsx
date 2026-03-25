@@ -20,8 +20,22 @@ export default function FadeIn({
 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -41,7 +55,7 @@ export default function FadeIn({
     }
 
     return () => observer.disconnect();
-  }, [once]);
+  }, [once, prefersReducedMotion]);
 
   const directionStyles = {
     up: "translate-y-8",
@@ -49,6 +63,11 @@ export default function FadeIn({
     left: "translate-x-8",
     right: "-translate-x-8",
   };
+
+  // If user prefers reduced motion, render without animation
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <div

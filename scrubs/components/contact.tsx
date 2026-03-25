@@ -2,10 +2,10 @@ import { Send } from "lucide-react";
 import FadeIn from "./fade-in";
 export default function ContactSection() {
   return (
-    <div id="contact" className="w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0 flex flex-col items-center">
+    <section id="contact" aria-labelledby="contact-heading" className="w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0 flex flex-col items-center">
       <FadeIn>
         <div className="w-full max-w-4xl flex flex-col items-center text-center">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
+          <h2 id="contact-heading" className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
             <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
               Find your community on<br className="hidden md:block" /> Scrubs, today.
             </span>
@@ -21,8 +21,9 @@ export default function ContactSection() {
             action="https://formsubmit.co/zackyuandev@gmail.com"
             method="POST"
             className="flex flex-col gap-6 text-left"
+            aria-label="Contact form"
           >
-            <input type="text" name="_honey" className="hidden" />
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} aria-hidden="true" autoComplete="off" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="New Inquiry from Scrubs Website!" />
             <div className="flex flex-col md:flex-row gap-6">
@@ -33,8 +34,10 @@ export default function ContactSection() {
                   name="name"
                   id="name"
                   required
+                  aria-required="true"
                   placeholder="John Doe"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-red-500 focus:bg-white/10 transition-all duration-300"
+                  autoComplete="name"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300"
                 />
               </div>
               <div className="flex flex-col gap-2 w-full">
@@ -44,8 +47,10 @@ export default function ContactSection() {
                   name="email"
                   id="email"
                   required
+                  aria-required="true"
                   placeholder="john@company.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-red-500 focus:bg-white/10 transition-all duration-300"
+                  autoComplete="email"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300"
                 />
               </div>
             </div>
@@ -55,21 +60,22 @@ export default function ContactSection() {
                 name="message"
                 id="message"
                 required
+                aria-required="true"
                 rows={5}
-                placeholder=""
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-red-500 focus:bg-white/10 transition-all duration-300 resize-none"
+                placeholder="Tell us what's on your mind..."
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300 resize-none"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="mt-4 group flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_20px_rgba(220,38,38,0.3)] hover:shadow-[0_4px_30px_rgba(220,38,38,0.5)] w-full"
+              className="mt-4 group flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_20px_rgba(220,38,38,0.3)] hover:shadow-[0_4px_30px_rgba(220,38,38,0.5)] w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <span>Send Message</span>
-              <Send className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+              <Send className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
             </button>
           </form>
         </div>
       </FadeIn>
-    </div>
+    </section>
   );
 }

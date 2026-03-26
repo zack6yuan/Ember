@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero";
 import Navbar from "@/components/navbar";
 import ServicesSection from "@/components/services";
 import ProcessSection from "@/components/process";
+import FAQSection from "@/components/faq";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/footer";
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <HeroSection />
         <ServicesSection />
         <ProcessSection />
+        <FAQSection />
         <ContactSection />
         <Footer />
       </main>

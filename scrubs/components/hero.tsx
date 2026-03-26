@@ -1,5 +1,7 @@
 import { ArrowRight, Star } from "lucide-react";
 import FadeIn from "./fade-in";
+import Image from "next/image";
+import chloe from "../public/chloe.jpeg"
 
 export default function HeroSection() {
   return (
@@ -44,9 +46,7 @@ export default function HeroSection() {
       <FadeIn delay={700} duration={900}>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-2xl mt-2 mx-auto border border-white/30 w-full p-8 sm:p-10 rounded-2xl bg-white/2">
           <div className="flex -space-x-4" aria-hidden="true">
-            <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-red-500 to-red-700 flex items-center justify-center text-white font-medium text-xl relative z-30 shadow-lg">A</div>
-            <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-rose-500 to-rose-700 flex items-center justify-center text-white font-medium text-xl relative z-20 shadow-lg">M</div>
-            <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-pink-500 to-pink-700 flex items-center justify-center text-white font-medium text-xl relative z-10 shadow-lg">C</div>
+            <Image src={chloe} alt="" width={80} height={80} className="object-cover w-20 h-20 rounded-full shrink-0" aria-hidden="true" />
           </div>
           <div className="flex flex-col items-center sm:items-start gap-1">
             <div className="flex items-center gap-1" role="img" aria-label="5 out of 5 stars">

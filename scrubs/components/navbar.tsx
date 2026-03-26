@@ -107,7 +107,7 @@ export default function Navbar() {
         className={`md:hidden absolute top-0 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 ease-in-out z-40 overflow-hidden ${
           isOpen ? "max-h-screen py-24 border-opacity-100" : "max-h-0 py-0 border-opacity-0"
         }`}
-        {...(!isOpen && { inert: "" as unknown as boolean })}
+        inert={!isOpen ? true : undefined}
       >
         <ul className="flex flex-col px-8 gap-8" role="list">
           {navLinks.map((link, index) => (

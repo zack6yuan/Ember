@@ -16,7 +16,7 @@ export default function ContactSection() {
         </div>
       </FadeIn>
       <FadeIn delay={200}>
-        <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-500">
+        <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(220,38,38,0.12)] hover:border-white/20 hover:shadow-[0_8px_50px_-10px_rgba(220,38,38,0.2)] transition-all duration-500">
           <form
             action="https://formsubmit.co/zackyuandev@gmail.com"
             method="POST"
@@ -68,7 +68,7 @@ export default function ContactSection() {
             </div>
             <button
               type="submit"
-              className="mt-4 group flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_20px_rgba(220,38,38,0.3)] hover:shadow-[0_4px_30px_rgba(220,38,38,0.5)] w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="mt-4 group flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(220,38,38,0.4)] hover:shadow-[0_8px_50px_rgba(220,38,38,0.6)] w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <span>Send Message</span>
               <Send className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />

@@ -48,7 +48,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         </h3>
         <ChevronDown
           className={`w-5 h-5 md:w-6 md:h-6 shrink-0 text-white/50 group-hover:text-white/80 transition-all duration-300 ${
-            isOpen ? "rotate-180 text-red-500" : ""
+            isOpen ? "rotate-180 text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]" : ""
           }`}
           aria-hidden="true"
         />
@@ -86,7 +86,7 @@ export default function FAQSection() {
         </div>
       </FadeIn>
       <FadeIn delay={150}>
-        <div className="w-full max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(255,255,255,0.05)] hover:border-white/15 transition-all duration-500">
+        <div className="w-full max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(220,38,38,0.12)] hover:border-white/15 hover:shadow-[0_8px_50px_-10px_rgba(220,38,38,0.2)] transition-all duration-500">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}

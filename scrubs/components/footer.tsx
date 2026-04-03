@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { MapPin } from 'lucide-react';
-import Image from 'next/image';
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,23 +19,11 @@ export default function Footer() {
           {/* Brand & Location Block */}
           <div className="flex flex-col max-w-sm">
             <Link href="/" className="flex items-center gap-3 mb-6 group w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" aria-label="Scrubs - Back to homepage">
-              <Image 
-                src="/S.png" 
-                alt="" 
-                width={40} 
-                height={40}
-                className="object-contain w-10 h-10 shrink-0 invert brightness-200 transition-transform duration-300 group-hover:scale-105"
-                aria-hidden="true"
-              />
-              <span className="text-3xl font-ztNature tracking-tight text-white leading-none">Scrubs</span>
+              <span className="text-3xl tracking-tight text-white leading-none" style={{ fontFamily: 'var(--font-dyna-puff)' }}>SCRUBS</span>
             </Link>
             <p className="text-white/60 mb-6 font-light leading-relaxed">
               A private community where nurses say the quiet part out loud. Vent. Connect. Decompress. Built for the shift that never quite ends.
             </p>
-            <div className="flex items-center text-sm text-white/50">
-              <MapPin size={16} className="mr-2" aria-hidden="true" />
-              <p className="font-light tracking-wide">Tulsa, Oklahoma</p>
-            </div>
           </div>
 
           {/* Quick Links Column */}

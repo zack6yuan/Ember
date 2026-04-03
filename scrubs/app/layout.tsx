@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { DynaPuff } from 'next/font/google'
 import './globals.css'
 const ztNature = localFont({
   src: [
@@ -20,6 +21,10 @@ const ztNature = localFont({
     },
   ],
   variable: '--font-zt-nature',
+})
+const dynaPuff = DynaPuff({
+  subsets: ['latin'],
+  variable: '--font-dyna-puff',
 })
 export const metadata: Metadata = {
   title: 'Scrubs — A Safe Space for Nurses',
@@ -48,7 +53,7 @@ export const metadata: Metadata = {
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${ztNature.variable} scroll-smooth`}>
+    <html lang="en" className={`${ztNature.variable} ${dynaPuff.variable} scroll-smooth`}>
       <body className={`${ztNature.className} antialiased min-h-screen text-white`} style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 40%, #1a0505 0%, #0a0000 40%, #000000 100%)' }}>
         <a
           href="#main-content"

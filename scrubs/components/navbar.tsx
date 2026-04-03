@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { ArrowRight, MapPin, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
@@ -37,21 +37,7 @@ export default function Navbar() {
     <header className="w-full relative">
       <nav className="flex justify-between px-7 py-5 items-center max-w-7xl mx-auto" aria-label="Main navigation">
         <div className="flex flex-row items-center gap-3 z-50">
-          <Image 
-            src="/S.png" 
-            alt="" 
-            width={55} 
-            height={55}
-            className="object-contain w-[45px] h-[45px] shrink-0 invert brightness-200"
-            aria-hidden="true"
-          />
-          <div className="flex flex-col justify-center">
-            <Link href="/" className="text-4xl font-ztNature tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">Scrubs</Link>
-            <div className="flex items-center text-sm text-white/50 mt-2">
-              <MapPin size={14} className="mr-1" aria-hidden="true" />
-              <p className="font-light tracking-wide leading-none">Tulsa, OK</p>
-            </div>
-          </div>
+          <Link href="/" className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" style={{ fontFamily: 'var(--font-dyna-puff)' }}>SCRUBS</Link>
         </div>
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8" role="list">

@@ -33,12 +33,12 @@ export default function ProcessSection() {
         </div>
       </FadeIn>
       <div className="relative mt-8 md:mt-16 w-full max-w-4xl">
-        <div className="absolute top-[24px] left-[23.5px] md:top-[32px] md:left-[39.5px] bottom-10 w-px md:w-[2px] bg-linear-to-b from-red-600 via-red-600/50 to-transparent z-0" aria-hidden="true"></div>
+        <div className="absolute top-[24px] left-[23.5px] md:top-[32px] md:left-[39.5px] bottom-10 w-px md:w-[2px] bg-linear-to-b from-orange-600 via-orange-600/50 to-transparent z-0" aria-hidden="true"></div>
         <ol className="flex flex-col gap-12 sm:gap-16" role="list">
           {processSteps.map((step, idx) => (
             <FadeIn key={idx} delay={idx * 200} direction="left">
               <li className="relative z-10 flex gap-6 md:gap-10 items-start group">
-                <div className="shrink-0 w-12 h-12 md:w-20 md:h-20 rounded-full bg-red-600 flex items-center justify-center text-2xl md:text-4xl font-medium text-white shadow-[0_4px_30px_rgba(220,38,38,0.5)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_4px_50px_rgba(220,38,38,0.7)]" aria-hidden="true">
+                <div className="shrink-0 w-12 h-12 md:w-20 md:h-20 rounded-full bg-orange-600 flex items-center justify-center text-2xl md:text-4xl font-medium text-white shadow-[0_4px_30px_rgba(234,88,12,0.5)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_4px_50px_rgba(234,88,12,0.7)]" aria-hidden="true">
                   {step.num}
                 </div>
                 <div className="pt-2 md:pt-4">
@@ -56,14 +56,14 @@ export default function ProcessSection() {
       </div>
       <FadeIn delay={100}>
         <div className="w-full max-w-3xl mt-12 md:mt-20">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 p-8 md:p-10 rounded-4xl bg-white/5 border border-white/10 shadow-[0_4px_40px_-10px_rgba(220,38,38,0.15)] backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:shadow-[0_8px_60px_-10px_rgba(220,38,38,0.25)] transition-all duration-500">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 p-8 md:p-10 rounded-4xl bg-white/5 border border-white/10 shadow-[0_4px_40px_-10px_rgba(234,88,12,0.15)] backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:shadow-[0_8px_60px_-10px_rgba(234,88,12,0.25)] transition-all duration-500">
             <div className="text-center sm:text-left flex-1">
               <h3 className="text-2xl md:text-4xl font-medium text-white mb-2 tracking-tight">Ready to find your community?</h3>
               <p className="text-white/70 text-base md:text-xl font-light">Join the conversation today.</p>
             </div>
             <a
               href="#contact"
-              className="group flex shrink-0 items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(220,38,38,0.4)] hover:shadow-[0_8px_50px_rgba(220,38,38,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group flex shrink-0 items-center justify-center gap-3 bg-orange-600 hover:bg-orange-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_8px_50px_rgba(234,88,12,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <span>Join Scrubs</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />

@@ -5,28 +5,28 @@ import FadeIn from "./fade-in";
 
 const faqs = [
   {
-    question: "Is Scrubs really anonymous?",
-    answer: "Yes, 100%. Your real name, workplace, and credentials are never shared with the community. You pick a display name, and that's all anyone sees. We don't sell data, period.",
+    question: "Is Ember really anonymous?",
+    answer: "Yes, 100%. Your real name and personal details are never shared with the community. You pick a display name and that's all anyone sees. We don't sell data, period.",
   },
   {
-    question: "Who can join Scrubs?",
-    answer: "Scrubs is built for nurses, nursing students, and healthcare workers. Whether you're an RN, LPN, CNA, NP, or still in clinicals — if you've ever had a shift that broke you, you belong here.",
+    question: "Who can join Ember?",
+    answer: "Everyone. If you've ever had a day that broke you a little — and needed somewhere honest to put it — you belong here.",
   },
   {
     question: "Is the app free?",
-    answer: "Yes. Scrubs is completely free to join and use. We believe every nurse deserves a safe space — no paywall, no premium tiers, no catch.",
+    answer: "Yes. Ember is completely free to join and use. Everyone deserves a space to breathe — no paywall, no premium tiers, no catch.",
   },
   {
     question: "What kind of content is allowed?",
-    answer: "Anything that helps you decompress. Vent about tough shifts, celebrate wins, ask for advice, or just drop a meme. The only rule: be kind to each other. No harassment, no doxxing, no toxicity.",
+    answer: "Anything that helps you decompress. Vent about a hard day, celebrate a small win, ask for advice, or just say the thing you can't say anywhere else. The only rule: be kind to each other. No harassment, no toxicity.",
   },
   {
-    question: "How is Scrubs different from Reddit or Facebook groups?",
-    answer: "Those platforms aren't built for you. Scrubs is nurse-first — anonymous by default, organized by unit type and specialty, and free from the algorithm-driven noise. No ads in your feed, no random opinions from non-nurses.",
+    question: "How is Ember different from Reddit or X?",
+    answer: "Those platforms weren't built for this. Ember is anonymous by default, organized by mood rather than identity, and free from algorithmic noise. No ads in your feed, no clout chasing — just people being real with each other.",
   },
   {
-    question: "When does Scrubs launch?",
-    answer: "Soon! Join the waitlist to get early access and be the first to know when we go live. Early members help shape the community from day one.",
+    question: "When does Ember launch?",
+    answer: "Soon. Join the waitlist to get early access and help shape the community from day one.",
   },
 ];
 
@@ -40,7 +40,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
     <div className="border-b border-white/10 last:border-b-0">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 py-6 md:py-8 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-sm"
+        className="w-full flex items-center justify-between gap-4 py-6 md:py-8 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
         aria-expanded={isOpen}
       >
         <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-white group-hover:text-white/90 transition-colors duration-300 pr-4">
@@ -48,7 +48,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         </h3>
         <ChevronDown
           className={`w-5 h-5 md:w-6 md:h-6 shrink-0 text-white/50 group-hover:text-white/80 transition-all duration-300 ${
-            isOpen ? "rotate-180 text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]" : ""
+            isOpen ? "rotate-180 text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.6)]" : ""
           }`}
           aria-hidden="true"
         />
@@ -81,12 +81,12 @@ export default function FAQSection() {
             </span>
           </h2>
           <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
-            We&apos;ve got answers. Here&apos;s what nurses usually ask.
+            We&apos;ve got answers. Here&apos;s what people usually ask.
           </p>
         </div>
       </FadeIn>
       <FadeIn delay={150}>
-        <div className="w-full max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(220,38,38,0.12)] hover:border-white/15 hover:shadow-[0_8px_50px_-10px_rgba(220,38,38,0.2)] transition-all duration-500">
+        <div className="w-full max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(234,88,12,0.12)] hover:border-white/15 hover:shadow-[0_8px_50px_-10px_rgba(234,88,12,0.2)] transition-all duration-500">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}

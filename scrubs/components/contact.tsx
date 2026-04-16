@@ -38,16 +38,16 @@ export default function ContactSection() {
         <div className="w-full max-w-4xl flex flex-col items-center text-center">
           <h2 id="contact-heading" className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
             <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
-              Find your community on<br className="hidden md:block" /> Scrubs, today.
+              Find your people on<br className="hidden md:block" /> Ember, today.
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/70 leading-relaxed font-light mb-16">
-            Join the conversation, find your community, share your experiences, and connect with nurses who get it.
+          Join the conversation, say what's on your mind, and connect with others who actually get it.
           </p>
         </div>
       </FadeIn>
       <FadeIn delay={200}>
-        <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(220,38,38,0.12)] hover:border-white/20 hover:shadow-[0_8px_50px_-10px_rgba(220,38,38,0.2)] transition-all duration-500">
+        <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(234,88,12,0.12)] hover:border-white/20 hover:shadow-[0_8px_50px_-10px_rgba(234,88,12,0.2)] transition-all duration-500">
           {status === "success" ? (
             <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
               <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-2">
@@ -55,11 +55,11 @@ export default function ContactSection() {
               </div>
               <h3 className="text-2xl font-medium text-white">You&apos;re on the list!</h3>
               <p className="text-white/60 text-lg font-light max-w-md">
-                We&apos;ll reach out when Scrubs is ready. Welcome to the community.
+                We&apos;ll reach out when Ember is ready. Welcome to the community.
               </p>
               <button
                 onClick={() => setStatus("idle")}
-                className="mt-4 text-red-400 hover:text-red-300 transition-colors duration-300 text-sm font-medium"
+                className="mt-4 text-orange-400 hover:text-orange-300 transition-colors duration-300 text-sm font-medium"
               >
                 Submit another response →
               </button>
@@ -82,7 +82,7 @@ export default function ContactSection() {
                     placeholder="John Doe"
                     autoComplete="name"
                     disabled={status === "submitting"}
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300 disabled:opacity-50"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus:border-orange-500 focus:bg-white/10 transition-all duration-300 disabled:opacity-50"
                   />
                 </div>
                 <div className="flex flex-col gap-2 w-full">
@@ -96,7 +96,7 @@ export default function ContactSection() {
                     placeholder="john@company.com"
                     autoComplete="email"
                     disabled={status === "submitting"}
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300 disabled:opacity-50"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus:border-orange-500 focus:bg-white/10 transition-all duration-300 disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -110,12 +110,12 @@ export default function ContactSection() {
                   rows={5}
                   placeholder="Tell us what's on your mind..."
                   disabled={status === "submitting"}
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus:border-red-500 focus:bg-white/10 transition-all duration-300 resize-none disabled:opacity-50"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus:border-orange-500 focus:bg-white/10 transition-all duration-300 resize-none disabled:opacity-50"
                 ></textarea>
               </div>
 
               {status === "error" && (
-                <div className="flex items-center gap-3 text-red-400 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
+                <div className="flex items-center gap-3 text-orange-400 bg-orange-500/10 border border-orange-500/20 rounded-xl px-4 py-3">
                   <AlertCircle className="w-5 h-5 shrink-0" />
                   <p className="text-sm">Something went wrong. Please try again.</p>
                 </div>
@@ -124,7 +124,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="mt-4 group flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(220,38,38,0.4)] hover:shadow-[0_8px_50px_rgba(220,38,38,0.6)] w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-60 disabled:cursor-not-allowed"
+                className="mt-4 group flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_8px_50px_rgba(234,88,12,0.6)] w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === "submitting" ? (
                   <>

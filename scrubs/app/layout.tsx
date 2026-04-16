@@ -27,20 +27,20 @@ const dynaPuff = DynaPuff({
   variable: '--font-dyna-puff',
 })
 export const metadata: Metadata = {
-  title: 'Scrubs — A Safe Space for Nurses',
-  description: 'Scrubs is a private community where nurses vent, connect, and decompress. Anonymous, judgement-free, and built for healthcare workers.',
-  keywords: ['nurses', 'healthcare', 'community', 'venting', 'mental health', 'nurse burnout', 'healthcare workers', 'scrubs app'],
-  metadataBase: new URL('https://scrubs.vercel.app'),
+  title: 'Ember — Anonymously Vent',
+  description: 'Ember is a private community where you say the quiet part out loud. Vent. Connect. Decompress. Built for the moments that never quite leave you.',
+  keywords: ['community', 'venting', 'mental health', 'burnout', 'healthcare workers', 'ember app'],
+  metadataBase: new URL('https://ember.vercel.app'),
   openGraph: {
-    title: 'Scrubs — A Safe Space for Nurses',
-    description: 'A private community where nurses say the quiet part out loud. Vent. Connect. Decompress.',
-    siteName: 'Scrubs',
+    title: 'Ember — Anonymously Vent',
+    description: 'A private community where you say the quiet part out loud. Vent. Connect. Decompress. Built for the moments that never quite leave you.',
+    siteName: 'Ember',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Scrubs — A Safe Space for Nurses',
+    title: 'Ember — Anonymously Vent',
     description: 'A private community where nurses say the quiet part out loud.',
   },
   robots: {
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${ztNature.className} antialiased min-h-screen text-white`} style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 40%, #1a0505 0%, #0a0000 40%, #000000 100%)' }}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-red-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-orange-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
         >
           Skip to main content
         </a>

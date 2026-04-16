@@ -37,7 +37,7 @@ export default function Navbar() {
     <header className="w-full relative">
       <nav className="flex justify-between px-7 py-5 items-center max-w-7xl mx-auto" aria-label="Main navigation">
         <div className="flex flex-row items-center gap-3 z-50">
-          <Link href="/" className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" style={{ fontFamily: 'var(--font-dyna-puff)' }}>SCRUBS</Link>
+          <Link href="/" className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">Ember</Link>
         </div>
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8" role="list">
@@ -45,7 +45,7 @@ export default function Navbar() {
               <li key={link.name}>
                 <Link 
                   href={link.href}
-                  className="relative group text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
+                  className="relative group text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                 >
                   {link.name}
                   <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white/80 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" aria-hidden="true"></span>
@@ -56,14 +56,14 @@ export default function Navbar() {
           </ul>
           <Link
             href="#contact"
-            className="group flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-[0_2px_12px_rgba(220,38,38,0.3)] hover:shadow-[0_4px_20px_rgba(220,38,38,0.5)] hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            className="group flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-[0_2px_12px_rgba(234,88,12,0.3)] hover:shadow-[0_4px_20px_rgba(234,88,12,0.5)] hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             Join the Waitlist
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
           </Link>
         </div>
         <button 
-          className="md:hidden z-50 p-2 relative w-12 h-12 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
+          className="md:hidden z-50 p-2 relative w-12 h-12 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
@@ -106,7 +106,7 @@ export default function Navbar() {
             >
               <Link 
                 href={link.href}
-                className="group inline-flex items-center w-fit text-3xl font-ztNature tracking-wide text-white/70 hover:text-white transition-all duration-300 hover:translate-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-sm"
+                className="group inline-flex items-center w-fit text-3xl font-ztNature tracking-wide text-white/70 hover:text-white transition-all duration-300 hover:translate-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
                 onClick={() => setIsOpen(false)}
                 tabIndex={isOpen ? 0 : -1}
               >
@@ -123,7 +123,7 @@ export default function Navbar() {
           >
             <Link
               href="#contact"
-              className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-2xl text-xl font-medium transition-all duration-300 shadow-[0_4px_20px_rgba(220,38,38,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-2xl text-xl font-medium transition-all duration-300 shadow-[0_4px_20px_rgba(234,88,12,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               onClick={() => setIsOpen(false)}
               tabIndex={isOpen ? 0 : -1}
             >

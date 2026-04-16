@@ -18,7 +18,7 @@ export default function Footer() {
           
           {/* Brand & Location Block */}
           <div className="flex flex-col max-w-sm">
-            <Link href="/" className="flex items-center gap-3 mb-6 group w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" aria-label="Scrubs - Back to homepage">
+            <Link href="/" className="flex items-center gap-3 mb-6 group w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" aria-label="Scrubs - Back to homepage">
               <span className="text-3xl tracking-tight text-white leading-none" style={{ fontFamily: 'var(--font-dyna-puff)' }}>SCRUBS</span>
             </Link>
             <p className="text-white/60 mb-6 font-light leading-relaxed">
@@ -34,9 +34,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href} 
-                    className="text-white/60 hover:text-red-400 transition-colors duration-300 font-light flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-sm"
+                    className="text-white/60 hover:text-orange-400 transition-colors duration-300 font-light flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
                   >
-                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-red-400 transition-colors" aria-hidden="true"></span>
+                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-orange-400 transition-colors" aria-hidden="true"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-medium text-lg mb-2">Contact Info</h4>
             <div className="flex flex-col gap-3 text-white/60 font-light">
-              <a href="mailto:zackyuandev@gmail.com" className="hover:text-red-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded-sm">
+              <a href="mailto:zackyuandev@gmail.com" className="hover:text-orange-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm">
                 zackyuandev@gmail.com
               </a>
             </div>

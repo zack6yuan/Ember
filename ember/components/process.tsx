@@ -5,12 +5,12 @@ export default function ProcessSection() {
     {
       num: "1",
       title: "Download the app",
-      desc: "It's free to join. Create an account and join a conversation with nurses who get it.",
+      desc: "It's free to join. Create an account and join a conversation with people who get it.",
     },
     {
       num: "2",
       title: "Find your people",
-      desc: "Scroll through real stories from nurses across the country. Find your unit, your unit type, or just a friendly face.",
+      desc: "Scroll through real stories from people across the country. Find your unit, your unit type, or just a friendly face.",
     },
     {
       num: "3",

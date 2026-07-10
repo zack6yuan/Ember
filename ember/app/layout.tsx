@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ember — Anonymously Vent',
-    description: 'A private community where nurses say the quiet part out loud.',
+    description: 'A private community where people say the quiet part out loud.',
   },
   robots: {
     index: true,

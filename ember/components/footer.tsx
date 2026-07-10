@@ -22,7 +22,7 @@ export default function Footer() {
               <span className="text-3xl tracking-tight text-white leading-none">Ember</span>
             </Link>
             <p className="text-white/60 mb-6 font-light leading-relaxed">
-              A private community where people say the quiet part out loud. Vent. Connect. Decompress. Built for the shift that never quite ends.
+              A private community where people say the quiet part out loud. Vent. Connect. Decompress. Built for the moments that never quite leave you.
             </p>
           </div>
 

@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { DynaPuff } from 'next/font/google'
+import { DynaPuff, Geist } from 'next/font/google'
 import './globals.css'
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 const ztNature = localFont({
   src: [
     {
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${ztNature.variable} ${dynaPuff.variable} scroll-smooth`}>
+    <html lang="en" className={cn("scroll-smooth", ztNature.variable, dynaPuff.variable, "font-sans", geist.variable)}>
       <body className={`${ztNature.className} antialiased min-h-screen text-white`} style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 40%, #1a0505 0%, #0a0000 40%, #000000 100%)' }}>
         <a
           href="#main-content"

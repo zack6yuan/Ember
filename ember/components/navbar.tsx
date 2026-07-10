@@ -34,11 +34,22 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="w-full relative">
-      <nav className="flex justify-between px-7 py-5 items-center max-w-7xl mx-auto" aria-label="Main navigation">
+    // Change: Using "absolute" instead of "fixed" so it stays at the top of the page and scrolls out of view.
+    <header className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] px-4 pt-4 md:px-8 md:pt-6 z-50">
+      <nav 
+        className="flex justify-between px-6 py-4 items-center max-w-7xl mx-auto rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]" 
+        aria-label="Main navigation"
+      >
         <div className="flex flex-row items-center gap-3 z-50">
-          <Link href="/" className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">Ember</Link>
+          {/* Restored: Exact original text metrics and weights */}
+          <Link 
+            href="/" 
+            className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
+          >
+            Ember
+          </Link>
         </div>
+        
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8" role="list">
             {navLinks.map((link) => (
@@ -62,6 +73,7 @@ export default function Navbar() {
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
           </Link>
         </div>
+        
         <button 
           className="md:hidden z-50 p-2 relative w-12 h-12 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
@@ -85,41 +97,42 @@ export default function Navbar() {
           />
         </button>
       </nav>
+
+      {/* Mobile Drawer Overlay */}
       <div
         id="mobile-menu"
         role="dialog"
         aria-label="Mobile navigation menu"
         aria-modal={isOpen}
-        className={`md:hidden absolute top-0 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 ease-in-out z-40 overflow-hidden ${
-          isOpen ? "max-h-screen py-24 border-opacity-100" : "max-h-0 py-0 border-opacity-0"
+        className={`md:hidden fixed inset-0 w-screen h-screen bg-black/90 backdrop-blur-2xl transition-all duration-500 ease-in-out z-40 flex flex-col justify-center items-center ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         inert={!isOpen ? true : undefined}
       >
-        <ul className="flex flex-col px-8 gap-8" role="list">
+        <ul className="flex flex-col items-center gap-10 w-full" role="list">
           {navLinks.map((link, index) => (
             <li 
               key={link.name}
               className={`transform transition-all duration-500 ${
-                isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                isOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
               }`}
-              style={{ transitionDelay: isOpen ? `${index * 100}ms` : "0ms" }}
+              style={{ transitionDelay: isOpen ? `${index * 75}ms` : "0ms" }}
             >
               <Link 
                 href={link.href}
-                className="group inline-flex items-center w-fit text-3xl font-ztNature tracking-wide text-white/70 hover:text-white transition-all duration-300 hover:translate-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
+                className="group inline-flex items-center text-4xl font-ztNature tracking-wide text-white/70 hover:text-white transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
                 onClick={() => setIsOpen(false)}
                 tabIndex={isOpen ? 0 : -1}
               >
                 {link.name}
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-4 text-white/50 text-2xl" aria-hidden="true">→</span>
               </Link>
             </li>
           ))}
           <li
             className={`transform transition-all duration-500 mt-4 ${
-              isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
-            style={{ transitionDelay: isOpen ? `${navLinks.length * 100}ms` : "0ms" }}
+            style={{ transitionDelay: isOpen ? `${navLinks.length * 75}ms` : "0ms" }}
           >
             <Link
               href="#contact"
@@ -134,5 +147,5 @@ export default function Navbar() {
         </ul>
       </div>
     </header>
-  )
+  );
 }

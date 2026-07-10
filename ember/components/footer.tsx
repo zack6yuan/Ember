@@ -18,8 +18,8 @@ export default function Footer() {
           
           {/* Brand & Location Block */}
           <div className="flex flex-col max-w-sm">
-            <Link href="/" className="flex items-center gap-3 mb-6 group w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" aria-label="Scrubs - Back to homepage">
-              <span className="text-3xl tracking-tight text-white leading-none" style={{ fontFamily: 'var(--font-dyna-puff)' }}>SCRUBS</span>
+            <Link href="/" className="flex items-center gap-3 mb-6 group w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm" aria-label="Ember - Back to homepage">
+              <span className="text-3xl tracking-tight text-white leading-none">Ember</span>
             </Link>
             <p className="text-white/60 mb-6 font-light leading-relaxed">
               A private community where nurses say the quiet part out loud. Vent. Connect. Decompress. Built for the shift that never quite ends.
@@ -58,7 +58,7 @@ export default function Footer() {
 
         {/* Bottom Copyright Line */}
         <div className="w-full border-t border-white/10 mt-12 md:mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm font-medium">
-          <p suppressHydrationWarning>© {currentYear} Scrubs. All rights reserved.</p>
+          <p suppressHydrationWarning>© {currentYear} Ember. All rights reserved.</p>
         </div>
 
       </div>

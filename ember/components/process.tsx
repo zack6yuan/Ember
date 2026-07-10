@@ -65,7 +65,7 @@ export default function ProcessSection() {
               href="#contact"
               className="group flex shrink-0 items-center justify-center gap-3 bg-orange-600 hover:bg-orange-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_8px_50px_rgba(234,88,12,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
-              <span>Join Scrubs</span>
+              <span>Join Ember</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </div>

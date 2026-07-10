@@ -129,7 +129,7 @@ export default function HeroSection() {
           <div className="mt-4 flex">
             <a
               href="#contact"
-              className="group flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-500 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl shadow-[0_4px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_8px_50px_rgba(234,88,12,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group flex items-center justify-center gap-3 bg-linear-to-br from-orange-500 via-orange-600 to-red-600 hover:from-orange-400 hover:via-orange-500 hover:to-red-500 hover:-translate-y-0.5 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_4px_20px_-4px_rgba(234,88,12,0.5)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.28),0_6px_28px_-4px_rgba(234,88,12,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <span>Join the Waitlist</span>
               <ArrowRight

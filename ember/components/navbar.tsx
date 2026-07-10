@@ -67,7 +67,7 @@ export default function Navbar() {
           </ul>
           <Link
             href="#contact"
-            className="group flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-[0_2px_12px_rgba(234,88,12,0.3)] hover:shadow-[0_4px_20px_rgba(234,88,12,0.5)] hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            className="group flex items-center gap-2 bg-linear-to-br from-orange-500 via-orange-600 to-red-600 hover:from-orange-400 hover:via-orange-500 hover:to-red-500 hover:-translate-y-0.5 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.18),0_2px_10px_-2px_rgba(234,88,12,0.45)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_14px_-3px_rgba(234,88,12,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             Join the Waitlist
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
@@ -145,7 +145,7 @@ export default function Navbar() {
           >
             <Link
               href="#contact"
-              className="group inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-2xl text-xl font-medium transition-all duration-300 shadow-[0_4px_20px_rgba(234,88,12,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              className="group inline-flex items-center gap-3 bg-linear-to-br from-orange-500 via-orange-600 to-red-600 hover:from-orange-400 hover:via-orange-500 hover:to-red-500 hover:-translate-y-0.5 text-white px-8 py-4 rounded-2xl text-xl font-medium transition-all duration-300 border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_4px_20px_-4px_rgba(234,88,12,0.5)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.28),0_6px_28px_-4px_rgba(234,88,12,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               onClick={() => setIsOpen(false)}
               tabIndex={isOpen ? 0 : -1}
             >

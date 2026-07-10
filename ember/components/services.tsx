@@ -14,8 +14,8 @@ export default function ServicesSection() {
               Your Rules.
             </span>
           </h2>
-          <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
-            A space built for real people, not highlight reels. No fluff, no toxic positivity, just honest talk from people who actually get it.
+          <p className="mt-6 max-w-3xl mx-auto px-3 md:px-0 text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
+            A space built for real people, not highlight reels. No fluff, no toxic positivity, just honest talk from people who actually get&nbsp;it.
           </p>
         </div>
       </FadeIn>

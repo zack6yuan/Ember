@@ -36,15 +36,15 @@ export default function Navbar() {
   return (
     // Change: Using "absolute" instead of "fixed" so it stays at the top of the page and scrolls out of view.
     <header className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] px-4 pt-4 md:px-8 md:pt-6 z-50">
-      <nav 
-        className="flex justify-between px-6 py-4 items-center max-w-7xl mx-auto rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]" 
+      <nav
+        className="flex justify-between px-4 py-2.5 md:px-6 md:py-4 items-center max-w-7xl mx-auto rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]"
         aria-label="Main navigation"
       >
         <div className="flex flex-row items-center gap-3 z-50">
           {/* Restored: Exact original text metrics and weights */}
-          <Link 
-            href="/" 
-            className="text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
+          <Link
+            href="/"
+            className="text-3xl md:text-4xl tracking-tight leading-none focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
           >
             Ember
           </Link>
@@ -74,22 +74,22 @@ export default function Navbar() {
           </Link>
         </div>
         
-        <button 
-          className="md:hidden z-50 p-2 relative w-12 h-12 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
+        <button
+          className="md:hidden z-50 p-2 relative w-10 h-10 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <Menu 
-            size={32} 
+          <Menu
+            size={28}
             className={`absolute transition-all duration-500 ease-in-out ${
               isOpen ? "opacity-0 rotate-90 scale-50" : "opacity-100 rotate-0 scale-100"
             }`}
             aria-hidden="true"
           />
-          <X 
-            size={32} 
+          <X
+            size={28}
             className={`absolute transition-all duration-500 ease-in-out ${
               isOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-50"
             }`}
@@ -109,6 +109,15 @@ export default function Navbar() {
         }`}
         inert={!isOpen ? true : undefined}
       >
+        <button
+          className="absolute top-6 right-6 z-50 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close menu"
+          tabIndex={isOpen ? 0 : -1}
+        >
+          <X size={32} aria-hidden="true" />
+        </button>
+
         <ul className="flex flex-col items-center gap-10 w-full" role="list">
           {navLinks.map((link, index) => (
             <li 

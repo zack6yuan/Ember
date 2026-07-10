@@ -7,15 +7,15 @@ export default function HeroSection() {
     <section
       aria-labelledby="hero-heading"
       // 1. Expanded the main section to max-w-[1920px] so the background can spread out wide
-      className="relative overflow-hidden w-full max-w-[1920px] mx-auto px-8 pt-32 md:pt-40 lg:pt-48 py-12 lg:py-24"
+      className="relative overflow-hidden w-full max-w-[1920px] mx-auto px-5 md:px-8 pt-32 md:pt-40 lg:pt-48 py-12 lg:py-24"
     >
       {/* 2. Background wrapper stretches completely within the 1920px bound */}
-      <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0 -z-10 pointer-events-none opacity-60" aria-hidden="true">
         <Aurora
           colorStops={["#ff4d00", "#ff4d00", "#ff4d00"]}
           blend={20}
-          amplitude={1.0}
-          speed={1}
+          amplitude={0.5}
+          speed={0.5}
         />
       </div>
 
@@ -49,12 +49,12 @@ export default function HeroSection() {
             />
             <h1
               id="hero-heading"
-              className="relative text-5xl md:text-7xl xl:text-8xl font-ztNature font-medium leading-[1.05] tracking-tight"
+              className="relative text-4xl md:text-7xl xl:text-8xl font-ztNature font-medium leading-[1.05] tracking-tight"
             >
               <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
                 Let it out before{" "}
               </span>
-              <br />
+              <br className="hidden md:block" />
               <span className="bg-linear-to-br from-white/80 to-white/30 bg-clip-text text-transparent">
                 {" "}
                 it{" "}
@@ -62,16 +62,14 @@ export default function HeroSection() {
               <span className="bg-linear-to-br from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(249,115,22,0.4)]">
                 burns{" "}
               </span>
-              <br className="block md:hidden" />
-              <span className="bg-linear-to-br from-white/80 to-white/30 bg-clip-text text-transparent">
-                you up.
+              <span className="bg-linear-to-br from-white/80 to-white/30 bg-clip-text text-transparent">you up.
               </span>
             </h1>
           </div>
         </FadeIn>
 
         <FadeIn delay={500} duration={900}>
-          <div className="max-w-3xl mt-4 mx-auto">
+          <div className="max-w-3xl mt-4 mx-auto px-6 md:px-0">
             <p className="text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
               Ember is a community where you say the quiet part out loud. Vent.
               Connect. Decompress. Built for the moments that never quite leave

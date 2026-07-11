@@ -49,6 +49,7 @@ export default function Embers({ count = 45 }: { count?: number }) {
     let embers: Ember[] = [];
 
     function resize() {
+      if (!canvas || !ctx) return;
       const parent = canvas.parentElement;
       width = parent?.clientWidth ?? window.innerWidth;
       height = parent?.clientHeight ?? window.innerHeight;
@@ -60,6 +61,7 @@ export default function Embers({ count = 45 }: { count?: number }) {
     }
 
     function frame() {
+      if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
       for (const e of embers) {
         e.life++;

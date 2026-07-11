@@ -1,13 +1,14 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import FadeIn from "./fade-in";
 import Aurora from "./Aurora";
+import Embers from "./embers";
 
 export default function HeroSection() {
   return (
     <section
       aria-labelledby="hero-heading"
       // 1. Expanded the main section to max-w-[1920px] so the background can spread out wide
-      className="relative overflow-hidden w-full max-w-[1920px] mx-auto px-5 md:px-8 pt-32 md:pt-40 lg:pt-48 py-12 lg:py-24"
+      className="relative overflow-hidden w-full max-w-[1920px] mx-auto px-5 md:px-8 pt-40 md:pt-52 lg:pt-60 pb-24 lg:pb-40"
     >
       {/* 2. Background wrapper stretches completely within the 1920px bound */}
       <div className="absolute inset-0 -z-10 pointer-events-none opacity-60" aria-hidden="true">
@@ -18,6 +19,10 @@ export default function HeroSection() {
           speed={0.5}
         />
       </div>
+
+      {/* Rising embers, behind the hero content */}
+      <Embers />
+
 
       {/* 3. Inner flex layout container keeps your actual content centered & maxed out at 7xl */}
       <div className="flex flex-col items-center text-center gap-8 w-full max-w-7xl mx-auto">
@@ -49,7 +54,7 @@ export default function HeroSection() {
             />
             <h1
               id="hero-heading"
-              className="relative text-4xl md:text-7xl xl:text-8xl font-ztNature font-medium leading-[1.05] tracking-tight"
+              className="relative text-balance md:text-wrap text-5xl md:text-7xl xl:text-8xl font-ztNature font-medium leading-[1.05] tracking-tight"
             >
               <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
                 Let it out before{" "}
@@ -77,54 +82,6 @@ export default function HeroSection() {
             </p>
           </div>
         </FadeIn>
-
-        <FadeIn delay={700} duration={900}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-2xl mt-2 mx-auto border border-white/30 w-full p-8 sm:p-10 rounded-2xl bg-white/2 shadow-[0_0_40px_-10px_rgba(234,88,12,0.15)]">
-            <div className="flex -space-x-4" aria-hidden="true">
-              <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-red-500 to-orange-700 flex items-center justify-center text-white font-medium text-xl relative z-30 shadow-[0_0_15px_rgba(249,115,22,0.5)]">
-                A
-              </div>
-              <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-orange-700 to-yellow-700 flex items-center justify-center text-white font-medium text-xl relative z-20 shadow-[0_0_15px_rgba(244,63,94,0.5)]">
-                M
-              </div>
-              <div className="w-16 h-16 rounded-full border-2 border-black bg-linear-to-br from-yellow-700 to-red-700 flex items-center justify-center text-white font-medium text-xl relative z-10 shadow-[0_0_15px_rgba(236,72,153,0.5)]">
-                C
-              </div>
-            </div>
-            <div className="flex flex-col items-center sm:items-start gap-1">
-              <div
-                className="flex items-center gap-1"
-                role="img"
-                aria-label="5 out of 5 stars"
-              >
-                <Star
-                  className="w-6 h-6 fill-yellow-500 text-yellow-500"
-                  aria-hidden="true"
-                />
-                <Star
-                  className="w-6 h-6 fill-yellow-500 text-yellow-500"
-                  aria-hidden="true"
-                />
-                <Star
-                  className="w-6 h-6 fill-yellow-500 text-yellow-500"
-                  aria-hidden="true"
-                />
-                <Star
-                  className="w-6 h-6 fill-yellow-500 text-yellow-500"
-                  aria-hidden="true"
-                />
-                <Star
-                  className="w-6 h-6 fill-yellow-500 text-yellow-500"
-                  aria-hidden="true"
-                />
-              </div>
-              <p className="text-white/90 text-lg font-medium">
-                Trusted by over 100 users
-              </p>
-            </div>
-          </div>
-        </FadeIn>
-
         <FadeIn delay={900} duration={900}>
           <div className="mt-4 flex">
             <a

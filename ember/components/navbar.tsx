@@ -8,7 +8,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "Features", href: "#services" },
     { name: "How It Works", href: "#process" },
-    { name: "Contact", href: "#contact" },
   ];
 
   // Close mobile menu on Escape key

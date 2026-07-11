@@ -3,17 +3,17 @@ import FadeIn from "./fade-in";
 export default function ProcessSection() {
   const processSteps = [
     {
-      num: "1",
+      num: "01",
       title: "Download the app",
       desc: "It's free to join. Create an account and join a conversation with people who get it.",
     },
     {
-      num: "2",
+      num: "02",
       title: "Find your people",
       desc: "Scroll through real stories from people across the country. Find your unit, your unit type, or just a friendly face.",
     },
     {
-      num: "3",
+      num: "03",
       title: "Vent or connect",
       desc: "Share your shift, ask for advice, or just drop a GIF. No judgment. No pressure. Just real talk.",
     },
@@ -32,45 +32,40 @@ export default function ProcessSection() {
           </p>
         </div>
       </FadeIn>
-      <div className="relative mt-8 md:mt-16 w-full max-w-4xl">
-        <div className="absolute top-[24px] left-[23.5px] md:top-[32px] md:left-[39.5px] bottom-10 w-px md:w-[2px] bg-linear-to-b from-orange-600 via-orange-600/50 to-transparent z-0" aria-hidden="true"></div>
-        <ol className="flex flex-col gap-12 sm:gap-16" role="list">
-          {processSteps.map((step, idx) => (
-            <FadeIn key={idx} delay={idx * 200} direction="left">
-              <li className="relative z-10 flex gap-6 md:gap-10 items-start group">
-                <div className="shrink-0 w-12 h-12 md:w-20 md:h-20 rounded-full bg-orange-600 flex items-center justify-center text-2xl md:text-4xl font-medium text-white shadow-[0_4px_30px_rgba(234,88,12,0.5)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_4px_50px_rgba(234,88,12,0.7)]" aria-hidden="true">
+      <ol className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-8 md:mt-16" role="list">
+        {processSteps.map((step, idx) => (
+          <FadeIn key={idx} delay={idx * 150} className="h-full">
+            <li className="group relative flex flex-col items-start text-left h-full p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)]">
+              {/* Oversized ghosted step numeral, clipped to the card */}
+              <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none" aria-hidden="true">
+                <span className="absolute -top-8 -right-3 text-[10rem] leading-none font-ztNature font-medium text-white/[0.04] group-hover:text-white/[0.07] transition-colors duration-500 select-none">
                   {step.num}
+                </span>
+              </div>
+
+              {/* Step index + accent rule */}
+              <div className="relative z-10 mb-8 flex items-center gap-3">
+                <span className="text-sm font-medium tracking-[0.25em] text-orange-500">{step.num}</span>
+                <span className="h-px w-8 bg-linear-to-r from-orange-500/60 to-transparent" aria-hidden="true"></span>
+              </div>
+
+              <h3 className="relative z-10 text-2xl md:text-3xl font-medium text-white mb-3 tracking-tight">
+                <span className="sr-only">Step {idx + 1}: </span>{step.title}
+              </h3>
+              <p className="relative z-10 text-base md:text-lg text-white/70 leading-relaxed font-light">
+                {step.desc}
+              </p>
+
+              {/* Sequence connector between cards (desktop only) */}
+              {idx < processSteps.length - 1 && (
+                <div className="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 items-center justify-center text-orange-500/40" aria-hidden="true">
+                  <ArrowRight className="w-6 h-6" strokeWidth={2} />
                 </div>
-                <div className="pt-2 md:pt-4">
-                  <h3 className="text-2xl md:text-4xl font-medium text-white mb-3 tracking-tight">
-                    <span className="sr-only">Step {step.num}: </span>{step.title}
-                  </h3>
-                  <p className="text-white/70 text-base md:text-xl lg:text-2xl leading-relaxed font-light">
-                    {step.desc}
-                  </p>
-                </div>
-              </li>
-            </FadeIn>
-          ))}
-        </ol>
-      </div>
-      <FadeIn delay={100}>
-        <div className="w-full max-w-3xl mt-12 md:mt-20">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 p-8 md:p-10 rounded-4xl bg-white/5 border border-white/10 shadow-[0_4px_40px_-10px_rgba(234,88,12,0.15)] backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:shadow-[0_8px_60px_-10px_rgba(234,88,12,0.25)] transition-all duration-500">
-            <div className="text-center sm:text-left flex-1">
-              <h3 className="text-2xl md:text-4xl font-medium text-white mb-2 tracking-tight">Ready to find your community?</h3>
-              <p className="text-white/70 text-base md:text-xl font-light">Join the conversation today.</p>
-            </div>
-            <a
-              href="#contact"
-              className="group flex shrink-0 items-center justify-center gap-3 bg-linear-to-br from-orange-500 via-orange-600 to-red-600 hover:from-orange-400 hover:via-orange-500 hover:to-red-500 hover:-translate-y-0.5 transition-all duration-300 text-white px-8 py-5 rounded-2xl font-medium text-lg md:text-xl border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_4px_20px_-4px_rgba(234,88,12,0.5)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.28),0_6px_28px_-4px_rgba(234,88,12,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
-              <span>Join Ember</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-      </FadeIn>
+              )}
+            </li>
+          </FadeIn>
+        ))}
+      </ol>
     </section>
   );
 }

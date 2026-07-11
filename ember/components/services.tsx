@@ -19,9 +19,9 @@ export default function ServicesSection() {
           </p>
         </div>
       </FadeIn>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl mt-4" role="list">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-4" role="list">
         <FadeIn delay={0}>
-          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/30 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden h-full" role="listitem">
+          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden h-full" role="listitem">
             <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-10 transition-opacity duration-500 text-white translate-x-4 -translate-y-4" aria-hidden="true">
               <EyeOff size={120} />
             </div>
@@ -35,7 +35,7 @@ export default function ServicesSection() {
           </article>
         </FadeIn>
         <FadeIn delay={150}>
-          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/30 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden h-full" role="listitem">
+          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden h-full" role="listitem">
             <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-10 transition-opacity duration-500 text-white translate-x-4 -translate-y-4" aria-hidden="true">
               <Users size={120} />
             </div>
@@ -49,7 +49,7 @@ export default function ServicesSection() {
           </article>
         </FadeIn>
         <FadeIn delay={300}>
-          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/30 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden md:col-span-2 lg:col-span-1 h-full" role="listitem">
+          <article className="group relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)] overflow-hidden md:col-span-2 lg:col-span-1 h-full" role="listitem">
             <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-10 transition-opacity duration-500 text-white translate-x-4 -translate-y-4" aria-hidden="true">
               <MessageCircleHeart size={120} />
             </div>

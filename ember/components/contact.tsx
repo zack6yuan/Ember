@@ -42,12 +42,12 @@ export default function ContactSection() {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/70 leading-relaxed font-light mb-16">
-          Join the conversation, say what's on your mind, and connect with others who actually get it.
+          Join the conversation, say what's on your mind, and connect with others who actually get it. Let us know that you're interested in being part of the community.
           </p>
         </div>
       </FadeIn>
-      <FadeIn delay={200}>
-        <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(234,88,12,0.12)] hover:border-white/20 hover:shadow-[0_8px_50px_-10px_rgba(234,88,12,0.2)] transition-all duration-500">
+      <FadeIn delay={200} className="w-full">
+        <div className="w-full max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-4xl p-8 md:p-12 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(234,88,12,0.12)] hover:border-white/20 hover:shadow-[0_8px_50px_-10px_rgba(234,88,12,0.2)] transition-all duration-500">
           {status === "success" ? (
             <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
               <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-2">

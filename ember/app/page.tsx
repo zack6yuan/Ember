@@ -1,7 +1,9 @@
 import HeroSection from "@/components/hero";
 import Navbar from "@/components/navbar";
+import PromptsMarquee from "@/components/prompts-marquee";
 import ServicesSection from "@/components/services";
 import ProcessSection from "@/components/process";
+import FounderNote from "@/components/founder-note";
 import FAQSection from "@/components/faq";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/footer";
@@ -19,8 +21,10 @@ export default function App() {
       <main id="main-content" className="relative z-10">
         <Navbar />
         <HeroSection />
+        <PromptsMarquee />
         <ServicesSection />
         <ProcessSection />
+        <FounderNote />
         <FAQSection />
         <ContactSection />
         <Footer />

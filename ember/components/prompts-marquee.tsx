@@ -56,7 +56,7 @@ export default function PromptsMarquee() {
         <div className="mx-auto mb-12 w-full max-w-4xl px-8 text-center">
           <h2
             id="prompts-heading"
-            className="text-3xl md:text-5xl lg:text-6xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-4"
+            className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-4"
           >
             <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
               The kind of thing you&apos;ll say here.

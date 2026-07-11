@@ -22,7 +22,7 @@ export default function ProcessSection() {
     <section id="process" aria-labelledby="process-heading" className="flex flex-col items-center gap-10 w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0">
       <FadeIn>
         <div className="w-full max-w-4xl text-center">
-          <h2 id="process-heading" className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
+          <h2 id="process-heading" className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
             <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
              Three Steps. That&apos;s It.
             </span>

@@ -36,7 +36,7 @@ export default function ContactSection() {
     <section id="contact" aria-labelledby="contact-heading" className="w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0 flex flex-col items-center">
       <FadeIn>
         <div className="w-full max-w-4xl flex flex-col items-center text-center">
-          <h2 id="contact-heading" className="text-4xl md:text-6xl lg:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
+          <h2 id="contact-heading" className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
             <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
               Find your people on<br className="hidden md:block" /> Ember, today.
             </span>

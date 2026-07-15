@@ -37,18 +37,18 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-white/10 last:border-b-0">
+    <div className="border-b border-white/[0.06] last:border-b-0">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 py-6 md:py-8 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm"
+        className="w-full flex items-center justify-between gap-4 py-6 md:py-8 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-ember rounded-sm"
         aria-expanded={isOpen}
       >
-        <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-white group-hover:text-white/90 transition-colors duration-300 pr-4">
+        <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-ink group-hover:text-ember-warm transition-colors duration-300 pr-4">
           {question}
         </h3>
         <ChevronDown
-          className={`w-5 h-5 md:w-6 md:h-6 shrink-0 text-white/50 group-hover:text-white/80 transition-all duration-300 ${
-            isOpen ? "rotate-180 text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.6)]" : ""
+          className={`w-5 h-5 md:w-6 md:h-6 shrink-0 text-ink-muted group-hover:text-ink transition-all duration-300 ${
+            isOpen ? "rotate-180 text-ember drop-shadow-[0_0_8px_rgba(240,130,74,0.6)]" : ""
           }`}
           aria-hidden="true"
         />
@@ -60,7 +60,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         role="region"
         aria-hidden={!isOpen}
       >
-        <p className="text-white/60 text-base md:text-lg leading-relaxed font-light pr-12">
+        <p className="text-ink-body/75 text-base md:text-lg leading-relaxed font-light pr-12">
           {answer}
         </p>
       </div>
@@ -75,18 +75,16 @@ export default function FAQSection() {
     <section id="faq" aria-labelledby="faq-heading" className="flex flex-col items-center gap-10 w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0">
       <FadeIn>
         <div className="w-full max-w-4xl text-center">
-          <h2 id="faq-heading" className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
-            <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
-              Got Questions?
-            </span>
+          <h2 id="faq-heading" className="text-5xl md:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] tracking-tight text-ink mb-6">
+            Got <span className="italic text-ember-warm">questions</span>?
           </h2>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
+          <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-ink-dim leading-relaxed font-light">
             We&apos;ve got answers. Here&apos;s what people usually ask.
           </p>
         </div>
       </FadeIn>
       <FadeIn delay={150}>
-        <div className="w-full max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md shadow-[0_4px_40px_-10px_rgba(234,88,12,0.12)] hover:border-white/15 hover:shadow-[0_8px_50px_-10px_rgba(234,88,12,0.2)] transition-all duration-500">
+        <div className="w-full max-w-3xl bg-surface-card border border-white/[0.06] rounded-3xl p-6 md:p-10 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.9)] hover:border-ember/20 transition-all duration-500">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}

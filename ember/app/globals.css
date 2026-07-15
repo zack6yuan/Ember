@@ -7,15 +7,46 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+  --font-serif: var(--font-newsreader);
   --font-mono: var(--font-geist-mono);
-  --font-ztNature: var(--font-zt-nature);
+
+  /* Hearth design language — warm ember palette */
+  --color-hearth: #0d0805;
+  --color-ember: #f0824a;          /* accent: links, tags, eyebrow */
+  --color-ember-warm: #ffb073;     /* italic highlight word */
+  --color-ember-from: #ffa04d;     /* primary gradient start */
+  --color-ember-alt: #ff8a3d;      /* small-accent gradient start */
+  --color-ember-to: #e85a2a;       /* gradient end */
+  --color-on-ember: #1a0d06;       /* text on ember surfaces */
+  --color-surface-card: #181009;
+  --color-surface-cardalt: #1e130c;
+  --color-surface-input: #1c130d;
+  --color-surface-chip: #241914;
+  --color-surface-chipactive: #2a1c13;
+  --color-avatar-anon: #3a271c;
+  --color-ink: #fff6ef;            /* text primary */
+  --color-ink-body: #d8c8bd;
+  --color-ink-dim: #c9b7ab;
+  --color-ink-muted: #9a8a80;
+  --color-ink-faint: #7d6f66;
+
   --animate-blob: blob 7s infinite;
   --animate-glow: glow 3s ease-in-out infinite alternate;
   --animate-pulse-orange: pulse-orange 4s ease-in-out infinite;
+  --animate-flame-flicker: flame-flicker 2.8s ease-in-out infinite;
+  --animate-ember-glow: ember-glow 3.6s ease-in-out infinite;
   --animate-marquee: marquee 30s linear infinite;
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
+  }
+  @keyframes flame-flicker {
+    0%, 100% { transform: rotate(-2deg) scale(1); }
+    50% { transform: rotate(2deg) scale(1.05); }
+  }
+  @keyframes ember-glow {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.06); }
   }
   @keyframes blob {
     0% { transform: translate(0px, 0px) scale(1); }
@@ -81,7 +112,7 @@
   100% { background-position: 0% 50%; }
 }
 body {
-  background-color: #000000;
+  background-color: #0d0805;
 }
 
 :root {

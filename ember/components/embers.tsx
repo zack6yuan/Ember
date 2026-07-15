@@ -78,9 +78,9 @@ export default function Embers({ count = 45 }: { count?: number }) {
         const alpha = Math.sin((e.life / e.maxLife) * Math.PI) * 0.85;
         const radius = e.r * 3;
         const g = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, radius);
-        g.addColorStop(0, `rgba(255, 184, 92, ${alpha})`);
-        g.addColorStop(0.4, `rgba(249, 115, 22, ${alpha * 0.55})`);
-        g.addColorStop(1, "rgba(249, 115, 22, 0)");
+        g.addColorStop(0, `rgba(255, 176, 115, ${alpha})`);
+        g.addColorStop(0.4, `rgba(232, 90, 42, ${alpha * 0.55})`);
+        g.addColorStop(1, "rgba(232, 90, 42, 0)");
         ctx.fillStyle = g;
         ctx.beginPath();
         ctx.arc(e.x, e.y, radius, 0, Math.PI * 2);

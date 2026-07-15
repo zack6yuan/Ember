@@ -6,11 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        ztNature: ['var(--font-zt-nature)'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }

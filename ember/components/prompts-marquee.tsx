@@ -20,11 +20,11 @@ const rowTwo: Prompt[] = [
 
 function PromptCard({ prompt }: { prompt: Prompt }) {
   return (
-    <article className="mr-5 flex w-72 md:w-80 shrink-0 flex-col gap-4 rounded-3xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] transition-colors duration-500 hover:bg-white/10 hover:border-white/20">
-      <span className="inline-flex w-fit items-center rounded-full bg-orange-500/10 border border-orange-500/20 px-3 py-1 text-xs font-medium tracking-wide text-orange-300">
+    <article className="mr-5 flex w-72 md:w-80 shrink-0 flex-col gap-4 rounded-3xl bg-surface-card border border-white/[0.06] p-6 shadow-[0_20px_50px_-30px_rgba(0,0,0,0.8)] transition-colors duration-500 hover:border-ember/25">
+      <span className="inline-flex w-fit items-center rounded-full bg-surface-chip border border-white/[0.06] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ember">
         {prompt.kicker}
       </span>
-      <p className="text-lg md:text-xl text-white/85 leading-snug font-light">
+      <p className="text-lg md:text-xl text-ink-body leading-snug font-light">
         {prompt.text}
       </p>
     </article>
@@ -56,13 +56,11 @@ export default function PromptsMarquee() {
         <div className="mx-auto mb-12 w-full max-w-4xl px-8 text-center">
           <h2
             id="prompts-heading"
-            className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-4"
+            className="text-5xl md:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] tracking-tight text-ink mb-4"
           >
-            <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
-              The kind of thing you&apos;ll say here.
-            </span>
+            The kind of thing you&apos;ll <span className="italic text-ember-warm">say</span> here.
           </h2>
-          <p className="mx-auto max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed font-light">
+          <p className="mx-auto max-w-2xl text-lg md:text-xl text-ink-dim leading-relaxed font-light">
             No audience to perform for. Just space to be honest &mdash; however that
             looks today. Anonymous, always.
           </p>

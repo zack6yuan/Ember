@@ -22,12 +22,10 @@ export default function ProcessSection() {
     <section id="process" aria-labelledby="process-heading" className="flex flex-col items-center gap-10 w-full max-w-7xl mx-auto px-8 py-16 lg:py-32 xl:px-0">
       <FadeIn>
         <div className="w-full max-w-4xl text-center">
-          <h2 id="process-heading" className="text-5xl md:text-6xl xl:text-7xl font-ztNature font-medium leading-[1.1] tracking-tight text-white mb-6">
-            <span className="bg-linear-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm">
-             Three Steps. That&apos;s It.
-            </span>
+          <h2 id="process-heading" className="text-5xl md:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] tracking-tight text-ink mb-6">
+            <span className="italic text-ember-warm pr-[0.12em]">Three</span> steps. That&apos;s it.
           </h2>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed font-light">
+          <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-ink-dim leading-relaxed font-light">
             You&apos;ve earned a place to be honest. Here&apos;s how to get there.
           </p>
         </div>
@@ -35,30 +33,30 @@ export default function ProcessSection() {
       <ol className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-8 md:mt-16" role="list">
         {processSteps.map((step, idx) => (
           <FadeIn key={idx} delay={idx * 150} className="h-full">
-            <li className="group relative flex flex-col items-start text-left h-full p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-8px_rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_8px_40px_-10px_rgba(234,88,12,0.2)]">
+            <li className="group relative flex flex-col items-start text-left h-full p-8 md:p-10 rounded-3xl bg-surface-card border border-white/[0.06] shadow-[0_20px_50px_-30px_rgba(0,0,0,0.8)] transition-all duration-500 hover:border-ember/25 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(232,90,42,0.28)]">
               {/* Oversized ghosted step numeral, clipped to the card */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none" aria-hidden="true">
-                <span className="absolute -top-8 -right-3 text-[10rem] leading-none font-ztNature font-medium text-white/[0.04] group-hover:text-white/[0.07] transition-colors duration-500 select-none">
+                <span className="absolute -top-8 -right-3 text-[10rem] leading-none font-serif font-medium text-ember/[0.06] group-hover:text-ember/[0.1] transition-colors duration-500 select-none">
                   {step.num}
                 </span>
               </div>
 
               {/* Step index + accent rule */}
               <div className="relative z-10 mb-8 flex items-center gap-3">
-                <span className="text-sm font-medium tracking-[0.25em] text-orange-500">{step.num}</span>
-                <span className="h-px w-8 bg-linear-to-r from-orange-500/60 to-transparent" aria-hidden="true"></span>
+                <span className="text-sm font-semibold tracking-[0.25em] text-ember">{step.num}</span>
+                <span className="h-px w-8 bg-linear-to-r from-ember/60 to-transparent" aria-hidden="true"></span>
               </div>
 
-              <h3 className="relative z-10 text-2xl md:text-3xl font-medium text-white mb-3 tracking-tight">
+              <h3 className="relative z-10 text-2xl md:text-3xl font-semibold text-ink mb-3 tracking-tight">
                 <span className="sr-only">Step {idx + 1}: </span>{step.title}
               </h3>
-              <p className="relative z-10 text-base md:text-lg text-white/70 leading-relaxed font-light">
+              <p className="relative z-10 text-base md:text-lg text-ink-body/85 leading-relaxed font-light">
                 {step.desc}
               </p>
 
               {/* Sequence connector between cards (desktop only) */}
               {idx < processSteps.length - 1 && (
-                <div className="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 items-center justify-center text-orange-500/40" aria-hidden="true">
+                <div className="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 z-20 items-center justify-center text-ember/50" aria-hidden="true">
                   <ArrowRight className="w-6 h-6" strokeWidth={2} />
                 </div>
               )}

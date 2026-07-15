@@ -1,34 +1,18 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-import { DynaPuff, Geist } from 'next/font/google'
+import { Newsreader, Hanken_Grotesk } from 'next/font/google'
 import './globals.css'
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const ztNature = localFont({
-  src: [
-    {
-      path: '../public/fonts/ZTNature-Thin.ttf',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/ZTNature-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/ZTNature-Black.ttf',
-      weight: '900',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-zt-nature',
-})
-const dynaPuff = DynaPuff({
+// Hearth design language: soft serif headlines + grotesk body.
+const newsreader = Newsreader({
   subsets: ['latin'],
-  variable: '--font-dyna-puff',
+  style: ['normal', 'italic'],
+  variable: '--font-newsreader',
+})
+
+const hanken = Hanken_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-sans',
 })
 export const metadata: Metadata = {
   title: 'Ember — Anonymously Vent',
@@ -52,16 +36,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   other: {
-    'theme-color': '#000000',
+    'theme-color': '#0d0805',
   },
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cn("scroll-smooth", ztNature.variable, dynaPuff.variable, "font-sans", geist.variable)}>
-      <body className={`${ztNature.className} antialiased min-h-screen text-white`} style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 40%, #1a0505 0%, #0a0000 40%, #000000 100%)' }}>
+    <html lang="en" className={cn("scroll-smooth", newsreader.variable, hanken.variable, "font-sans")}>
+      <body className={`${hanken.className} antialiased min-h-screen text-[#fff6ef]`} style={{ background: 'radial-gradient(140% 90% at 50% 108%, #2a1408 0%, #150c07 34%, #0d0805 62%)' }}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-orange-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#e85a2a] focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
         >
           Skip to main content
         </a>

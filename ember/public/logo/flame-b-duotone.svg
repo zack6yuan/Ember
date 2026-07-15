@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" width="64" height="80" role="img" aria-label="Ember flame">
+  <defs>
+    <linearGradient id="ember" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#ffb073"/><stop offset="0.5" stop-color="#ffa04d"/><stop offset="1" stop-color="#e85a2a"/>
+    </linearGradient>
+    <linearGradient id="emberHi" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#fff0d8"/><stop offset="1" stop-color="#ffb073"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#ember)" d="M32 4 C 34 20, 50 28, 50 48 C 50 62, 42 76, 32 76 C 22 76, 14 62, 14 48 C 14 30, 30 24, 32 4 Z"/>
+  <path fill="url(#emberHi)" d="M32 34 C 33 42, 40 45, 40 54 C 40 61, 36 66, 32 66 C 28 66, 24 61, 24 54 C 24 45, 31 42, 32 34 Z"/>
+</svg>

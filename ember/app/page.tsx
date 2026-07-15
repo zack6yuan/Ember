@@ -1,5 +1,7 @@
 import HeroSection from "@/components/hero";
 import Navbar from "@/components/navbar";
+import LetItOut from "@/components/let-it-out";
+import AppPreview from "@/components/app-preview";
 import PromptsMarquee from "@/components/prompts-marquee";
 import ServicesSection from "@/components/services";
 import ProcessSection from "@/components/process";
@@ -21,8 +23,10 @@ export default function App() {
       <main id="main-content" className="relative z-10">
         <Navbar />
         <HeroSection />
+        <LetItOut />
         <PromptsMarquee />
         <ServicesSection />
+        <AppPreview />
         <ProcessSection />
         <FounderNote />
         <FAQSection />
